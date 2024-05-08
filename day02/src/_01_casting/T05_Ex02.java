@@ -58,8 +58,8 @@ public class T05_Ex02 {
 		
 	    int dividsResult1 = iNum1 / iNum2;
 	    double multiplyResult =  iNum2 * dNum;
-	    double castingResult = (double)iNum1;
-	    double castingDividsResult = (double)dividsResult1;
+//	    double castingResult = (double)iNum1;
+//	    double castingDividsResult = (double)dividsResult1;
 	    double dividsResult2 =iNum1 / fNum;
 	    
 	    System.out.println("3.1 iNum1 / iNum2의 몫 : "+ dividsResult1);

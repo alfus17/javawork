@@ -13,6 +13,7 @@ public class T04_Ex01 {
 		int Ex1input = scan.nextInt();
 
 		// 삼항연산자 사용하기	
+		
 		String output = Ex1input == 0 ? "0" : (Ex1input > 0 ? "양수":"음수") ;
 
 
