@@ -28,16 +28,16 @@ public class T01_Scanner {
 //		String address1 = scan.next(); //문자열 단어
 //		System.out.println("당신의 주소는 :" + address1 + "입니다." );
 
-//		System.out.println("당신의 주소를 입력하세요" );
-//		String address2 = scan.nextLine(); //문자열 단어
-//		System.out.println("당신의 주소는 :" + address2 + "입니다." );
+		System.out.println("당신의 주소를 입력하세요" );
+		String address2 = scan.nextLine(); //문자열 단어
+		System.out.println("당신의 주소는 :" + address2 + "입니다." );
 		
-//		System.out.print("당신의 성별은 무엇입니까?");
-//		String gender2 = scan.next();
-//		System.out.print("당신의 성별은 무엇입니까?");
-//		char gender3 = scan.next().charAt(1);
-//		System.out.println("성별 : "+ gender2);
-//		System.out.println("성별 : "+ gender3);
+		System.out.print("당신의 성별은 무엇입니까?");
+		String gender2 = scan.next();
+		System.out.print("당신의 성별은 무엇입니까?");
+		char gender3 = scan.next().charAt(1);
+		System.out.println("성별 : "+ gender2);
+		System.out.println("성별 : "+ gender3);
 		
 
 

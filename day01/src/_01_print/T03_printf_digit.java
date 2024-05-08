@@ -25,7 +25,7 @@ public class T03_printf_digit {
 		System.out.printf("[%s]\n", "abcdefg");
 		System.out.println("_____________________");
 
-		//		소수점 자리맞추기
+		//		소수점 자리맞추기 예제 1번은 전체 자리수 예제 2번 전체 자리 + 소수점 자리 + 예제3 소수점 자리만
 		System.out.printf("%2f\n", 133233.1415);
 		System.out.printf("%2.2f\n", 133233.1415);
 		System.out.printf("%.2f\n", 133233.1415);
