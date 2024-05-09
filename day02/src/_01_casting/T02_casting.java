@@ -3,6 +3,8 @@ package _01_casting;
 public class T02_casting {
 
 	public static void main(String[] args) {
+		
+//		
 
 		int num1 = 1234555;
 		byte b1 = (byte)num1;
@@ -19,7 +21,7 @@ public class T02_casting {
 		
 		int num2 = 50896;
 		char ch1 = (char)num2;
-		System.out.println();
+		System.out.println(ch1);
 	}
 
 }

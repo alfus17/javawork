@@ -3,6 +3,10 @@ package _01_print;
 public class T03_printf_digit {
 
 	public static void main(String[] args) {
+		/*
+		 * 코드 요약 정리
+		 * printf의 출력 방식 학습
+		 */
 
 		//		print의 자리 차지
 		//		7자리가 나오도록 print 하지만 5자리여서 앞의 두자리가 빔

@@ -4,6 +4,8 @@ public class T01_promotion {
 
 	public static void main(String[] args) {
 		
+//		요약 정리 : 큰 바이트에  작은 바이트의 형을 넣을 수 있으며 자동으로 형변환 된다
+		
 		byte b1 = 20; 
 		short s1 = b1; //2byte 에 1byte 넣기
 		int int1 = b1; // 4byte에 1byte 넣기
@@ -20,6 +22,8 @@ public class T01_promotion {
 		System.out.println(d1);
 		d1 = b1+2;
 		System.out.println(d1);
+		
+	
 	}
 
 }
