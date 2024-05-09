@@ -91,8 +91,9 @@ public class T06_Ex01 {
 		int koreanScore = scan.nextInt();
 		int mathScore = scan.nextInt();
 		int englishScore = scan.nextInt();
-
 		System.out.println("국어 :" +koreanScore+", 수학 : "+mathScore +", 영어 : " +englishScore);
+
+//		점수 합계 및 평균 계산
 		int scoreSum = koreanScore + mathScore + englishScore;
 		double scoreAvg = scoreSum / 3.0f;
 		
@@ -122,7 +123,6 @@ public class T06_Ex01 {
 		int thirdNum= scan.nextInt();
 		
 		System.out.println(thirdNum <=firstNum || thirdNum > secondNum ? true : false );
-		
 		
 		
 //		10. 3개의 수를 키보드로 입력 받아 입력 받은 수가 모두 같으면 true, 아니면 false를 출력하세요.
