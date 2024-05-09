@@ -4,7 +4,10 @@ public class T02_casting {
 
 	public static void main(String[] args) {
 		
-//		
+		/*
+		 * 코드 요약
+		 * Byte.MIN_VALUE 옆에와 같이 상수값들은 해당 처럼 대문자로 표기하여 상수인지 알아볼수있게 구분한다.
+		 */
 
 		int num1 = 1234555;
 		byte b1 = (byte)num1;

@@ -3,6 +3,13 @@ package _01_print;
 public class T02_printf {
 
 	public static void main(String[] args) {
+		
+		/*
+		 * 코드 요약정리
+		 *  printf의 사용법
+		 *  실수형 출력 float 밖에 없으며 소수점 6자리 이후부터는 반올림 한다.	
+		 * 
+		 */
 		//		십진수 출력
 		System.out.printf("%d \n",10);
 		System.out.printf("%d,%d \n",10 ,20);

@@ -5,6 +5,13 @@ import java.util.Scanner;
 public class T04_Ex01 {
 
 	public static void main(String[] args) {
+		
+		/*
+		 * 이번 코드 요약
+		 * 
+		 * 해당 코드는 상항 연산자 또는 if elseif 구문을 사용하여 처리해봄
+		 * if문과 삼항연산자는 처리속도 부분에서 서로 별다른 차이는 없지만, 짧은 구문들에 한정하여 삼항연산자의 표기가 훨신 간편하다고 판단.
+		 */
 
 		Scanner scan = new Scanner(System.in);
 		String output2 ="";

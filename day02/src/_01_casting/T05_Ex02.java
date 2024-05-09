@@ -5,6 +5,7 @@ public class T05_Ex02 {
 
 	public static void main(String[] args) {
 		/*
+		 * 코드 요약 정리
 		 * 1. 문자하나를 입력받아 그 문자의 유니코드를 출력하기
 			
 		 */

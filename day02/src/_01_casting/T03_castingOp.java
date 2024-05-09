@@ -4,6 +4,12 @@ package _01_casting;
 public class T03_castingOp {
 
 	public static void main(String[] args) {
+		/*
+		 * 코드 요약 정리
+		 * 높은 byte의 형을 낮은 byte의 형우르 강제로 변환하게 될 경우 해당 형에 범위를 넘어서게 되면 초가한 만큼 한바퀴를 돌아 표기가 된다.
+		 * 
+		 */
+		
 		// int 형보다 작은 자료형의 연산은 모두 int로 자동 형변환됨
 		byte b1 = 17;
 		byte b2 = 20;
