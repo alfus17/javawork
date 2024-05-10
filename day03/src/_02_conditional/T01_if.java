@@ -24,8 +24,12 @@ public class T01_if {
 		System.out.println("당신의 점수를 입력해주세요");
 		int score = scan.nextInt();
 		
-		if(score >= 80) {System.out.println("당신은 90합격입니다.");	}
-		System.out.println("축하합니다");
+		if(score >= 80) {
+			System.out.println("당신은 90합격입니다.");	
+			System.out.println("축하합니다");
+		}else {
+			System.out.println("분발 요망");
+		}
 	}
 
 }

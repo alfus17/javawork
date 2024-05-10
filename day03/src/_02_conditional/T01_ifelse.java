@@ -12,8 +12,11 @@ public class T01_ifelse {
  * 
  * 
  */
-		int num1 = -100;
-		if(num1 > 0) {
+		
+		
+		int num1 = 100;
+		
+		if(num1 >= 100 || num1 < 0) {
 			System.out.println("양수");
 		}else {
 			System.out.println("양수가 아이다");
