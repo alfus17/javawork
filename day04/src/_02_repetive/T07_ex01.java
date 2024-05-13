@@ -18,6 +18,7 @@ public class T07_ex01 {
 
 	
 //	2번 문제
+
 //		int evenSum = 0;
 //		int oddSum = 0;
 //		
@@ -30,10 +31,10 @@ public class T07_ex01 {
 //		}
 //		System.out.println("짝수의 합계는 " + evenSum);
 //		System.out.println("홀수의 합계는 " + oddSum);
-//	
-//	
+	
 
 //		3번문제
+		
 //		for(int x=1; x<=6; x++) {
 //			for(int y=1; y <=6; y++) {
 //				if(x+y == 6) {
@@ -41,9 +42,10 @@ public class T07_ex01 {
 //				}
 //			}
 //		}
-//	
+
 	
 //	4번문제
+		
 //		Scanner sc = new Scanner(System.in);
 //		System.out.println("정수릉 입력하시오");
 //		int num = sc.nextInt();
@@ -55,19 +57,25 @@ public class T07_ex01 {
 //			
 //		}
 		
+		
+		
 //	5번 문제
+		
 //		Scanner sc = new Scanner(System.in);
 //		System.out.println("정수릉 입력하시오");
-//		int num = sc.nextInt();
+//		int input = sc.nextInt();
 //		
-//		for(int index = 0; index <= num; index++) {
-//			for(int line =0; line <= num-index; line++) {
+//		for(int index = 0; index <= input; index++) {
+//			for(int line =0; line <= input-index; line++) {
 //				System.out.print("*");
 //			}System.out.println();
 //			
 //		}
 		
+		
+		
 //		6번문제
+//		
 //		Scanner sc = new Scanner(System.in);
 //		System.out.println("정수릉 입력하시오");
 //		int num = sc.nextInt();
@@ -83,7 +91,10 @@ public class T07_ex01 {
 //			
 //		}
 		
+		
+		
 //		7번 문제
+		
 //		int ran =0;
 //		int count = 0;
 //		while (ran != 6) {

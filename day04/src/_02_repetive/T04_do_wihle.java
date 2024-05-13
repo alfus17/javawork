@@ -12,6 +12,8 @@ public class T04_do_wihle {
 		 * do{
 		 * 
 		 * }while(조건식)
+		 * while이 조건이 참이면 do 다시 실행
+		 * 
 		 * 
 		 */
 		
