@@ -183,8 +183,9 @@ public class T06_ex02 {
 //		}
 //		System.out.println(Arrays.toString(intArr));
 //		
-		
-		
+//		
+//		
+//		
 		
 		
 		//
@@ -214,7 +215,7 @@ public class T06_ex02 {
 //		System.out.println(seletChick + (exist == true ? "배달 가능":"은 존재하지 않는 메뉴 입니다"));
 //		
 //		
-		
+//		
 		
 		
 		//10. 10개의 값을 저장할 수 있는 정수형 배열을 선언 및 할당하고
