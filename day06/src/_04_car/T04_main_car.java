@@ -42,7 +42,6 @@ public class T04_main_car {
 				case 4: {
 					car.powerOnOff();
 					break;
-
 				}
 				case 5: {
 					System.out.println("메뉴를 종료합니다.");
