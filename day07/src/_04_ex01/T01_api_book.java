@@ -41,5 +41,15 @@ public class T01_api_book {
 		System.out.println();
 	
 	}
+	String printf() {
+		String bookOutput ="책 이름 :" + (bookName == null?"조회되는 책 이름이 없습니다.":bookName);
+		String ISBNOutput = "\nISBN : " + (ISBN != 0?ISBN:"입력된 값이 없습니다.");
+		String priceOutput = "\n가격 :" + (price != 0? price:"입력된 값이 없습니다");
+		
+		System.out.println(bookOutput + ISBNOutput + priceOutput);
+		System.out.println();
+		
+		return priceOutput;
+	}
 
 }
