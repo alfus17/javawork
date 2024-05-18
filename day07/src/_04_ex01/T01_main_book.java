@@ -14,7 +14,7 @@ public class T01_main_book {
 		T01_api_book book3 = new T01_api_book("달빛조각사",123);
 		T01_api_book book4 = new T01_api_book("바람의 검심" , 454,12000);
 		
-		String a = book4.print();
+//		String a = book4.print();
 		
 		String b = book4.printf();
 		
