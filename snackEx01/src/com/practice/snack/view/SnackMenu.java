@@ -6,7 +6,7 @@ import com.practice.snack.controller.SnackController;
 import com.practice.snack.model.vo.Snack;
 
 
-public class SnackMenu extends Snack {
+public class SnackMenu{
 	
 	Scanner sc = new Scanner(System.in);
 	SnackController snackControl = new SnackController();
