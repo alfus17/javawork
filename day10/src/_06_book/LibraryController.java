@@ -9,6 +9,8 @@ public class LibraryController {
 	LibraryController(Member member){
 		this.member = member;
 	}
+	
+	
 	void info() {
 //		member출력
 		System.out.println(member);
