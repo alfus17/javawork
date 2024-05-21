@@ -40,6 +40,17 @@ public class T03_polyRun {
 		Car car2 = new Car(); //=> 객체생성시 Car 만 있기 때문에 강제 형변환이 불가능 하다.
 		
 		
+		// 
+		
+		//컴파일오류 (실행시 오류 발생)
+		FireCar fCar3 = null;
+		// instanceof : 좌측의 객체가 우측의 타입으로 만들어 졌는가를 검사 (true)
+		if(fCar3 instanceof FireCar) {
+			fCar3 = (FireCar)car2;
+			System.out.println(true);
+		}else {
+			System.out.println("변환 할 수 없음");
+		}
 	}
 
 }
