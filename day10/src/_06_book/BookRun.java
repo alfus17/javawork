@@ -2,6 +2,7 @@ package _06_book;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.Scanner;
 
 public class BookRun {
 
@@ -10,6 +11,8 @@ public class BookRun {
 // new Member("장광진",26,"남");
 //new Book("어린왕자", "쇼", "한빛");
 		
+		
+		Scanner sc = new Scanner(System.in);
 		Member m = new Member("장광진",26,"남");
 		
 		LibraryController lc = new LibraryController(new Member("장광진",26,"남") );

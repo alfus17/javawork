@@ -14,6 +14,16 @@ public interface RemoteControl {
 	
 	public abstract void turnOn();
 	
+	// default는 실행문을 넣을 수 있고
+	// 오버라이딩이 가능하지만 안해도 상관없다.
+	public default void method() {	
+	}
+	// static 메소드 : 실행문을 넣을 수 있다,.
+	// 오버라이딩 불가
+	static void info() {
+		
+	}
+	
 	void setVolume(int volume);
 	void setChannel(int channel);
 	// interface 에는 추상메서드만 들어올수있다

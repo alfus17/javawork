@@ -36,5 +36,12 @@ public class Tv implements RemoteControl {
 	public void setChannel(int channel) {
 		
 	}
+	
+	// interface 에서 default 메소드는 override 해도 되고 안해도 상관없다.
+//	
+	@Override
+	public void method() {
+		
+	}
 
 }

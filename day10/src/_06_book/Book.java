@@ -5,10 +5,7 @@ public class Book {
 	String author;
 	String publisher;
 	
-	public Book() {
-		
-	
-	}
+	public Book() {}
 	public Book(String title , String author, String publisher) {
 		this.title = title;
 		this.author = author;
