@@ -10,7 +10,6 @@ public class T10_substring {
 		// substring(index,lastIndex) : 문자열에서 index번호부터 lastIndex-1 까지 얻어옴
 		System.out.println(str.substring(7,10));
 		
-		
 	}
 
 }
