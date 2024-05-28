@@ -1,0 +1,49 @@
+package _02_ArrayList;
+
+public class T04_BoardArrayList_api {
+	private String title;
+	private String content;
+	private String writer;
+	
+	public T04_BoardArrayList_api() {}
+
+	public T04_BoardArrayList_api(String title, String content, String writer) {
+		this.title = title;
+		this.content = content;
+		this.writer = writer;
+	}
+
+	@Override
+	public String toString() {
+		return "[title=" + title + ", content=" + content + ", writer=" + writer + "]";
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public String getContent() {
+		return content;
+	}
+
+	public void setContent(String content) {
+		this.content = content;
+	}
+
+	public String getWriter() {
+		return writer;
+	}
+
+	public void setWriter(String writer) {
+		this.writer = writer;
+	}
+
+
+	
+	
+	
+}

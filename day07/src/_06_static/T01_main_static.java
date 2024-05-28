@@ -16,6 +16,7 @@ public class T01_main_static {
 		as1.sNum += 100000;
 		System.out.println("static as1.snum : " + as1.sNum);
 		System.out.println("static as2.snum : " + as2.sNum);
+	Integer
 		System.out.println("static as3.snum : " + as3.sNum);
 	}
 

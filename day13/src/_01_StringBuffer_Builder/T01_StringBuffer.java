@@ -18,7 +18,7 @@ public class T01_StringBuffer {
 		
 		// toString()은 오버라이딩 되어 있음(문자열 반환)
 		System.out.println("sb1=" + sb1);
-		sb1.append();
+//		sb1.append();
 		System.out.println("sb1=" + sb1);
 		sb1.append(123);
 		System.out.println("sb1=" + sb1);
