@@ -30,7 +30,7 @@ public class T01_LinkedList {
 		//이터레이터로 도는게 for문 으로 도는거보다 빠르다
 		// for 문은 검색속도가 느리다.
 		for(int i=0; i< list.size(); i++) {
-			list.get(i);ㄷ
+			list.get(i);
 		}
 		
 		//Iterator : 리스트를 순회할 수 있게 해주는 클래스
