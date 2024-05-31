@@ -38,7 +38,7 @@ public class BookRun {
 				break;
 			}
 			case 9: {
-				menuQuit =false;
+				menuQuit = !menuQuit;
 				break;
 			}
 			default:
