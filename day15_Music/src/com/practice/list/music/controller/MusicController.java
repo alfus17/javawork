@@ -93,9 +93,7 @@ public class MusicController {
 				Comparable c1 = (Comparable) o1;
 				Comparable c2 = (Comparable) o2;
 				
-				
-				
-				
+				return c2.compareTo(c1);
 			};
 		
 		});
