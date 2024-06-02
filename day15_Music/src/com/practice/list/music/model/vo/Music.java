@@ -45,13 +45,21 @@ public class Music implements Comparable<Object> {
 	//equals
 	@Override
 	public boolean equals(Object obj) {
-		return super.equals(obj);
+		
+		return  title.equals(((Music)obj).title);
 	}
 	
 	//compareTo
 	@Override
 	public int compareTo(Object o) {
-		return 0;
+		String reqTitle = ((Music)o).getTitle();
+		String reqSinger = ((Music)o).getTitle();
+		
+		int compareResult =title.compareTo(((Music)o).title);
+		if(compareResult == 0) {
+			return singer.compareTo(((Music)o).singer);
+		}
+		return compareResult;
 	}
 	
 

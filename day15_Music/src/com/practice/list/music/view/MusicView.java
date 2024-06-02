@@ -70,6 +70,14 @@ public class MusicView {
 	}
 	
 	public void addList() {
+//		****** 마지막 위치에 곡 추가 ******
+		// 곡 명과 가수 명을 사용자에게 입력 받는다.
+		// MusicController에 addList()를 이용해서 입력한 정보를 넘기고
+		// 추가 성공 시 “추가 성공”, 추가 실패 시 “추가 실패” 콘솔창에 출력
+		System.out.println("곡 명과 가수 명을 입력해 주세요");
+		String title =  sc.next();
+		String singer  = sc.next();
+	
 		
 	}
 	
