@@ -1,6 +1,7 @@
 package com.practice.list.music.view;
 
 import java.util.Scanner;
+import com.practice.list.music.model.vo.*;
 
 import com.practice.list.music.controller.MusicController;
 
@@ -10,10 +11,22 @@ public class MusicView {
 	
 	public void mainMenu() {
 		boolean quit = true;
+		int selectNum = 0;
+		
 		while (quit) {
-			printMenu();
+			
 			// 사용자가 입력한 메뉴 값
-			int selectNum = sc.nextInt();
+			while(true) {
+				try {
+					printMenu();
+					selectNum = sc.nextInt();
+					break;
+				} catch (Exception e) {
+					System.out.println("값을 잘못 입력하셨습니다.");
+					sc.next();
+				}
+			}
+			
 			
 			switch (selectNum) {
 			case 1: {
@@ -77,36 +90,65 @@ public class MusicView {
 		System.out.println("곡 명과 가수 명을 입력해 주세요");
 		String title =  sc.next();
 		String singer  = sc.next();
-	
 		
+		int result = mc.addList(new Music(title,singer));
+		
+		System.out.println(result == 1 ? "추가 성공" : "추가 실패");
+
 	}
 	
 	public void addAtZero() {
+		System.out.println("곡 명과 가수 명을 입력해 주세요");
+		String title =  sc.next();
+		String singer  = sc.next();
 		
+		int result = mc.addAtZero(new Music(title,singer));
+		
+		System.out.println(result == 1 ? "추가 성공" : "추가 실패");
 	}
 	
 	public void printAll() {
-		
+		System.out.println(mc.printAll());
 	}
 	
 	public void searchMusic() {
+		System.out.println("곡 명을 입력하세요");
+		String title =  sc.next();
 		
+		Music resultMusic = mc.searchMusic(title);
+		System.out.println(resultMusic != null ? "검색한  곡은 "+resultMusic+"입니다" : "검색한 곡이 없습니다." );
 	}
 	
 	public void removeMusic() {
+		System.out.println("삭제할 곡의 이름을 입력해 주세요");
+		String rmTitle = sc.next();
 		
+		Music rmResultMusic = mc.removeMusic(rmTitle);
+		
+		System.out.println(rmResultMusic != null ? rmResultMusic+"을 삭제했습니다." : "삭제할 곡이 없습니다." );
+	
 	}
 	
 	public void setMusic() {
+		System.out.println("수정할 곡의 제목과 가수명을 입력해 주세요");
+		String title = sc.next();
+		String singer = sc.next();
+				
+		Music resultSetMusic = mc.setMusic(title,singer);
 		
+		System.out.println(resultSetMusic != null ? resultSetMusic+"의 값이 변경되었습니다." : "수정할 곡이 없습니다." );
 	}
 	
 	public void ascTitle() {
+		int ascResult = mc.ascTitle();
+		System.out.println(ascResult == 1 ? "정렬 성공": "정렬 실패");
 		
 	}
 	
 	public void descSinger() {
+		int descResult = mc.descSinger();
 		
+		System.out.println(descResult == 1 ? "정렬 성공": "정렬 실패");
 	}
 	
 	public void printMenu() {

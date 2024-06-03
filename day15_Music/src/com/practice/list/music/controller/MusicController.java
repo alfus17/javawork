@@ -9,9 +9,19 @@ import java.util.List;
 import com.practice.list.music.model.vo.Music;
 
 public class MusicController {
-	
+
 	List<Music> list = new ArrayList();
-	
+
+	public MusicController() {
+		list.add(new Music("dd","zz"));
+		list.add(new Music("ee","kk"));
+		list.add(new Music("ff","aa"));
+		list.add(new Music("aa","xx"));
+		list.add(new Music("bb","ff"));
+		list.add(new Music("cc","jj"));
+
+	}
+
 	public int addList(Music music) {
 		try {
 			list.add(music);
@@ -21,7 +31,7 @@ public class MusicController {
 		// 성공시 return 1
 		return 1 ;
 	}
-	
+
 	public int addAtZero(Music music) {
 		try {
 			list.add(0,music);
@@ -31,24 +41,24 @@ public class MusicController {
 		// 성공시 1리턴
 		return 1;
 	}
-	
+
 	public List printAll() {
 		// list 반환
 		return list;
 	}
-	
+
 	public Music searchMusic(String title) {
 		Music findMusic = null;
 		for(Music music : list) {
-			if(music.equals(title)) {
+			if(music.getTitle().equals(title)) {
 				findMusic = music;
 				break;
 			}
 		}
 		return findMusic;
-		
+
 	}
-	
+
 	public Music removeMusic(String title) {
 		Music findMusic = null;
 		for(int i=0; i< list.size(); i ++) {
@@ -59,22 +69,22 @@ public class MusicController {
 			}
 		}
 		return findMusic;
-		
+
 	}
-	
-	public Music setMusic(String title , Music music) {
+
+	public Music setMusic(String title , String singer) {
 		Music findMusic = null;
 		for(int i=0; i< list.size(); i ++) {
 			if(list.get(i).getTitle().equals(title)) {
 				findMusic =list.get(i);
 				list.remove(findMusic);
-				list.add(i ,music );
+				list.add(i ,new Music(title, singer) );
 				break;
 			}
 		}
 		return findMusic;
 	}
-	
+
 	public int ascTitle() {
 		// 리스트 곡 명 오름차순 정렬, 제목이 같으면 가수 명으로 오름차순 정렬, 1 리턴
 		try {
@@ -82,25 +92,32 @@ public class MusicController {
 		} catch (Exception e) {
 			return 0;
 		}
+		System.out.println(list);
 		return 1;
 	}
-	
+
 	public int descSinger() {
 		// 리스트 가수 명 내림차순 정렬, 1 리턴
-		list.sort(new Comparator<Object>() {
-			@Override
-			public int compare(Object o1, Object o2) {
-				Comparable c1 = (Comparable) o1;
-				Comparable c2 = (Comparable) o2;
-				
-				return c2.compareTo(c1);
-			};
-		
-		});
-		return 0;
+
+		try {
+			Collections.sort(list,
+					new Comparator<Music>() {
+				@Override
+				public int compare(Music o1, Music o2) {
+					return o2.getSinger().compareTo(o1.getSinger());
+				}
+			});
+			System.out.println(list);
+		} catch (Exception e) {
+			return 0;
+		}
+
+		return 1;
+
+
 	}
-	
-	
-	
 
 }
+
+
+
