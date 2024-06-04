@@ -9,7 +9,7 @@ import java.util.function.ObjIntConsumer;
 public class T01_consumer {
 
 	public static void main(String[] args) {
-		/*
+		/* Consumer의 원형 : 미리 구현되어 있음
 		 * @FunctionalInterface
 			public interface Consumer<T> {
 
