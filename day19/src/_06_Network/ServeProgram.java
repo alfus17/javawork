@@ -24,15 +24,22 @@ public class ServeProgram {
 	 	 -UDP : 신뢰성이 없는 데이터 전달. 빠름(실시간 동상상 서비스)
 	 */
 	
-	/*
-	 	TCP(Transmission Control Protocol)
-	 	- 서버
-	  
-	 */
+	  /*
+	   * TCP(Treansmission Control Protocol)
+	     - 서버, 클라이언트 1:1소켓통신
+	     - 데이터를 교환하기 전에 서버, 클라이언트가 연결되어 있어야됨
+	     
+	   * Socket
+	     - Input/OutputStream을 가지고 소켓통신을 함
+	     
+	   * ServerSocket
+	     - 포트와 연결(Bind)되어 외부의 연결요청을 기다리다 연결요청이 들어오면 수락해줄 용도
+	       수락 => 통신할 수 있는 socket생성
+	   */
 
 	public static void main(String[] args) {
 		// 1) 포트 번호 지정
-		int port = 9001;
+		int port = 8080;
 		
 		Scanner sc = new Scanner(System.in);
 		
