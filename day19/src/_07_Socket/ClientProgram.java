@@ -20,7 +20,7 @@ public class ClientProgram {
 			try(Socket socket = new Socket(serverip, port)) {
 
 				try(BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream())); 
-						PrintWriter pw =new PrintWriter(socket.getOutputStream()) ){
+						PrintWriter pw = new PrintWriter(socket.getOutputStream()) ){
 					System.out.println(br.readLine());
 					
 					

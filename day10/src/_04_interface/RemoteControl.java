@@ -1,6 +1,6 @@
 package _04_interface;
 
-public interface RemoteControl {
+ public interface RemoteControl {
 	// 앞의 public static final은 인터페이스에서 생략 가능하다.
 //	interface에서 상수의 변수명은 대문자로 사용하며 _로 단어를 구분한다.ㅣ
 	public static final int MAX_VOLUME = 100;
