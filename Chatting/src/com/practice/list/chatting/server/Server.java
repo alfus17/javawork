@@ -10,17 +10,14 @@ import java.util.Scanner;
 
 public class Server extends Thread {
 	// 서버를 열 포트 설정
-	private static int port = 8080;
+	private int port = 8080;
 	static Scanner sc = new Scanner(System.in);
 		
-	// port 번호 설정해주기
-	public void setPort(int port){
-		this.port = port;
-		System.out.println("port 번호가 변경되었습니다 : "+ port);
-	}
+
 	
-	// 서버 열기
-	public static Socket OpenServer() {
+	// 서버 여는 메소드 
+	public Socket OpenServer(int port) {
+		this.port = port;
 		Socket socket = null;
 		
 	// 소켓 열기
@@ -44,5 +41,7 @@ public class Server extends Thread {
 		
 		return socket;
 	}
+	
+
 	
 }
