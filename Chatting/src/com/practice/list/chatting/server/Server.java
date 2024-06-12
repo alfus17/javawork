@@ -19,6 +19,7 @@ class chatView extends Thread{
 	public void setSocket(Socket socket) {
 		this.socket = socket;
 	}
+	
 	// Thread runner
 	@Override
 	public void run() {

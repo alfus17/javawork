@@ -29,7 +29,6 @@ public class Client1 {
 						
 					}
 				}
-
 			}
 		}catch (Exception e) {
 			e.printStackTrace();
