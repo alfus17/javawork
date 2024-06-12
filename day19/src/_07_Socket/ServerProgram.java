@@ -29,6 +29,7 @@ public class ServerProgram {
 					String msg = "";
 					
 					
+					
 					while((msg = br.readLine()) != null) {
 						if(msg.equals("exit")) {
 							break;
