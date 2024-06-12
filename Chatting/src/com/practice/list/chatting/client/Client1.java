@@ -21,11 +21,11 @@ public class Client1 {
 					
 					while (true) {
 						
-						System.out.println("클라이언트 : ");
+//						System.out.print("클라이언트 : ");
 						pw.println(sc.nextLine());
 						pw.flush();
 
-						System.out.println("서버 : " + br.readLine());
+//						System.out.println("서버 : " + br.readLine());
 						
 					}
 				}

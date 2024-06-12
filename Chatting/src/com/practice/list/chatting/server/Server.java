@@ -19,7 +19,6 @@ class chatView extends Thread{
 	public void setSocket(Socket socket) {
 		this.socket = socket;
 	}
-
 	// Thread runner
 	@Override
 	public void run() {
@@ -27,56 +26,22 @@ class chatView extends Thread{
 		try(BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 				PrintWriter pw = new PrintWriter(socket.getOutputStream())){
 			while(true) {
-				if(br.readLine() != null) {
-					System.out.println(1);
-				}else {
-					System.out.println(0);
-				}
+//				String msg = br.readLine();
+				System.out.println("client : " + br.readLine());
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
 }
-class chatting extends Thread{
-	private boolean flag = false;
 
-	Scanner sc = new Scanner(System.in);
-	static Socket socket = new Socket();
-	StringBuffer sb = new StringBuffer();
-
-	// setter
-	public void StopThread(boolean flag) {
-		this.flag = flag;
-	}
-	public void setSocket(Socket socket) {
-		this.socket = socket;
-	}
-
-	// Thread runner
-	@Override
-	public void run() {
-
-		try(BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-				PrintWriter pw = new PrintWriter(socket.getOutputStream())){
-			pw.println("환영합니다!!! 🐱‍💻");
-			pw.flush();
-			while(true) {
-				pw.println("server :" + sc.nextLine());
-				pw.flush();
-			}
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
-}
 public class Server {
 	public static void main(String[] args) {
 		int port = 9001;
 		Scanner sc = new Scanner(System.in);	
 		// 채팅창 보이는거
 		chatView chatView = new chatView();
-		chatting chatting = new chatting();
+
 
 		try {
 			try(ServerSocket server = new ServerSocket(port)) {
@@ -92,8 +57,14 @@ public class Server {
 					// 채팅창 쓰레드 시작
 					chatView.setDaemon(true);
 					chatView.start();
-					chatting.start();
 					
+					pw.println("환영합니다!!! 🐱‍💻");
+					pw.flush();
+					while(true) {
+					pw.println("server :" + sc.nextLine());
+					pw.flush();
+			
+					}
 				}
 			}
 		} catch (IOException e) {
