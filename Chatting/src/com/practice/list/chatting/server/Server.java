@@ -19,7 +19,7 @@ class chatView extends Thread{
 	public void setSocket(Socket socket) {
 		this.socket = socket;
 	}
-	
+
 	// Thread runner
 	@Override
 	public void run() {
@@ -27,7 +27,7 @@ class chatView extends Thread{
 		try(BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 				PrintWriter pw = new PrintWriter(socket.getOutputStream())){
 			while(true) {
-//				String msg = br.readLine();
+				//				String msg = br.readLine();
 				System.out.println("client : " + br.readLine());
 			}
 		} catch (IOException e) {
@@ -35,8 +35,42 @@ class chatView extends Thread{
 		}
 	}
 }
+class ServerReciver extends Thread{
+	//스테틱 해쉬맵 만들기 
+	/*
+	 * 해쉬맵 구성 
+	 * ip : 데스크탑이름
+	*/
+	@Override
+	public void run() {
+		int port = 9001;
+		Scanner sc = new Scanner(System.in);	
+	
+		try(ServerSocket server = new ServerSocket(port)) {
+			while(true) {
+				Socket socket = server.accept(); 
+				//받은 정보 해쉬맵에 넣고
+				
+			}
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+
+	}
+
+
+
+
+
+}
+
 
 public class Server {
+
+
+
 	public static void main(String[] args) {
 		int port = 9001;
 		Scanner sc = new Scanner(System.in);	
@@ -58,13 +92,13 @@ public class Server {
 					// 채팅창 쓰레드 시작
 					chatView.setDaemon(true);
 					chatView.start();
-					
+
 					pw.println("환영합니다!!! 🐱‍💻");
 					pw.flush();
 					while(true) {
-					pw.println("server :" + sc.nextLine());
-					pw.flush();
-			
+						pw.println("server :" + sc.nextLine());
+						pw.flush();
+
 					}
 				}
 			}
