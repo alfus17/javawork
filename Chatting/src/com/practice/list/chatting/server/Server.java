@@ -3,6 +3,7 @@ package com.practice.list.chatting.server;
 import java.awt.Toolkit;
 import java.io.*;
 import java.net.*;
+import java.util.*;
 import java.util.Scanner;
 
 class chatView extends Thread{
@@ -41,35 +42,37 @@ class ServerReciver extends Thread{
 	 * 해쉬맵 구성 
 	 * ip : 데스크탑이름
 	*/
+	// 큐의 최대사이즈
+	private static final int MAX_QUEUE_SIZE = 5;
+	// Socket객체가 쌓이는 큐 
+	private static Queue<Socket> userQueue = new LinkedList<>();
+	
 	@Override
 	public void run() {
 		int port = 9001;
-		Scanner sc = new Scanner(System.in);	
-	
+//		Scanner sc = new Scanner(System.in);	
+		
 		try(ServerSocket server = new ServerSocket(port)) {
 			while(true) {
 				Socket socket = server.accept(); 
-				//받은 정보 해쉬맵에 넣고
-				
+				// websocket 객체 큐 
+				synchronized (userQueue) {
+					// 만약 사이즈가 5가 넘을경우에는 가장 오래된 항목 삭제
+					if(userQueue.size() == MAX_QUEUE_SIZE) {
+						userQueue.poll();
+					}
+					// 새사용자정보를 큐에 추가
+					userQueue.offer(socket);
+				}
 			}
-
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
-
 	}
-
-
-
-
-
 }
 
 
 public class Server {
-
-
 
 	public static void main(String[] args) {
 		int port = 9001;
