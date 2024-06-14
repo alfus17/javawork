@@ -45,7 +45,7 @@ class ServerReciver extends Thread{
 	// 큐의 최대사이즈
 	private static final int MAX_QUEUE_SIZE = 5;
 	// Socket객체가 쌓이는 큐 
-	private static Queue<Socket> userQueue = new LinkedList<>();
+	private static Queue<String> userQueue = new LinkedList<>();
 	
 	@Override
 	public void run() {
@@ -62,7 +62,7 @@ class ServerReciver extends Thread{
 						userQueue.poll();
 					}
 					// 새사용자정보를 큐에 추가
-					userQueue.offer(socket);
+					userQueue.offer("");
 				}
 			}
 		} catch (IOException e) {
