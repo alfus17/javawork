@@ -1,5 +1,6 @@
 package com.practice.list.chatting.server;
 
+import com.practice.list.chatting.server.view.AsyncStringPrinter;
 import java.awt.Toolkit;
 import java.io.*;
 import java.net.*;
@@ -9,6 +10,7 @@ import java.util.Scanner;
 class chatView extends Thread{
 	private boolean flag = false;
 
+	AsyncStringPrinter printer = new AsyncStringPrinter();
 	Scanner sc = new Scanner(System.in);
 	static Socket socket = new Socket();
 	StringBuffer sb = new StringBuffer();
@@ -35,50 +37,16 @@ class chatView extends Thread{
 			e.printStackTrace();
 		}
 	}
-}
-class ServerReciver extends Thread{
-	//스테틱 해쉬맵 만들기 
-	/*
-	 * 해쉬맵 구성 
-	 * ip : 데스크탑이름
-	*/
-	// 큐의 최대사이즈
-	private static final int MAX_QUEUE_SIZE = 5;
-	// Socket객체가 쌓이는 큐 
-	private static Queue<String> userQueue = new LinkedList<>();
-	
-	@Override
-	public void run() {
-		int port = 9001;
-//		Scanner sc = new Scanner(System.in);	
-		
-		try(ServerSocket server = new ServerSocket(port)) {
-			while(true) {
-				Socket socket = server.accept(); 
-				// websocket 객체 큐 
-				synchronized (userQueue) {
-					// 만약 사이즈가 5가 넘을경우에는 가장 오래된 항목 삭제
-					if(userQueue.size() == MAX_QUEUE_SIZE) {
-						userQueue.poll();
-					}
-					// 새사용자정보를 큐에 추가
-					userQueue.offer("");
-				}
-			}
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
-}
 
 
-public class Server {
+
 
 	public static void main(String[] args) {
 		int port = 9001;
-		Scanner sc = new Scanner(System.in);	
+		Scanner sc = new Scanner(System.in);
+		AsyncStringPrinter printer = new AsyncStringPrinter();
 		// 채팅창 보이는거
-		chatView chatView = new chatView();
+		//		chatView chatView = new chatView();
 
 
 		try {
@@ -91,22 +59,26 @@ public class Server {
 
 				try(PrintWriter pw = new PrintWriter(socket.getOutputStream())){
 
-					chatView.setSocket(socket);
-					// 채팅창 쓰레드 시작
-					chatView.setDaemon(true);
-					chatView.start();
+					printer.setDaemon(true);
+					printer.start();
 
-					pw.println("환영합니다!!! 🐱‍💻");
-					pw.flush();
+					//					chatView.setSocket(socket);
+					//					// 채팅창 쓰레드 시작
+					//					chatView.setDaemon(true);
+					//					chatView.start();
+
+					//					pw.println("환영합니다!!! 🐱‍💻");
+					printer.setMsg("Server","환영합니다");
 					while(true) {
-						pw.println("server :" + sc.nextLine());
-						pw.flush();
+						//						pw.println("server :" + sc.nextLine());
+						//						pw.flush();
+						printer.setMsg("Server",sc.nextLine());
 
 					}
 				}
 			}
 		} catch (IOException e) {
-			chatView.StopThread(true);
+
 			e.printStackTrace();
 		} 
 	}
